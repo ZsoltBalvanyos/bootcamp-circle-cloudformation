@@ -2,23 +2,45 @@
 
 <!DOCTYPE html>
 <html>
-    <body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <style>
+
+        </style>
+    </head>
+    <body bgcolor="#faebd7">
         <h2>Your ToDo list</h2>
-        <div>
-            <ul>
-                @for(item <- items) {
-                    <li>@item.text <form method="post" action="@controllers.routes.TodoController.remove(item.epochMillis)"><button type="submit">Delete</button></form></li>
-                }
-            </ul>
-            @if(items.isEmpty) {
-                You don't have any ToDo items!
-            }
-        </div>
-        <div>
-            <form method="post" action="@controllers.routes.TodoController.create">
-                <input type="text" minlength="1" name="text">
-                <button type="submit">Create</button>
-            </form>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3"></div>
+                <div class="col-xs-12 col-md-6">
+                    <div style="width: 100%">
+                        <ul>
+                            @for(item <- items) {
+                                <li>@item.text <form method="post" action="@controllers.routes.TodoController.remove(item.epochMillis)"><button type="submit" style="background-color: greenyellow">Delete</button></form></li>
+                            }
+                        </ul>
+                        @if(items.isEmpty) {
+                            You don't have any ToDo items!
+                        }
+                    </div>
+                    <div>
+                        <form method="post" action="@controllers.routes.TodoController.create">
+                            <input type="text" minlength="1" name="text">
+                            <button type="submit">Create</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-md-3"></div>
+
+            </div>
         </div>
     </body>
 </html>
