@@ -13,7 +13,7 @@ jobs:
     working_directory: ~/bootcamp-circle-cloudformation
     steps:
       - checkout
-      - run: ./build-and-deploy-to-aws.sh zsolt-db-ToDoItemsTable-OIH28HNTA6CK zsolt
+      - run: ./build-and-deploy-to-aws.sh zsolt-auto-scaling-AutoScalingGroup-N7OVD5WRUKA8 zsolt
 
 workflows:
   version: 2
