@@ -14,7 +14,8 @@ jobs:
     working_directory: ~/bootcamp-circle-cloudformation
     steps:
       - checkout
-      - run: build-and-deploy-to-aws.sh
+      command:
+        - run: build-and-deploy-to-aws.sh
 
 workflows:
   version: 2
