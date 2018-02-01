@@ -174,7 +174,7 @@ Resources:
   DnsRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      Name: 'todo.bootcamp.ovotech.org.uk.'
+      Name: 'zsolt.bootcamp.ovotech.org.uk.'
       HostedZoneName: 'bootcamp.ovotech.org.uk.'
       Type: A
       AliasTarget:
